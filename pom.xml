@@ -3,9 +3,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.tum.in.ase.eist</groupId>
-  <artifactId>Testing-Exercise</artifactId>
+  <artifactId>Testing-Retake-Exercise</artifactId>
   <version>1.0</version>
-  <name>Testing Exercise</name>
+  <name>Testing Retake Exercise</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
