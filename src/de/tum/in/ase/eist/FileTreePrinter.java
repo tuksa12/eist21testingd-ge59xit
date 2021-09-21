@@ -39,14 +39,4 @@ public class FileTreePrinter {
         }
         return true;
     }
-
-    public static void main(String[] args) {
-        var p = new FileTreePrinter();
-        p.setHierarchicalPrinter((name, level) -> {
-            System.out.println("┆ ".repeat(Integer.max(0, level)) + "┠ " + name);
-            return true;
-        });
-        p.printSortedByName(new Folder("fa", new File("x"),
-                new Folder("fb", new File("c"), new File("b"), new Folder("ca", new File("asdf"), new File("html"))), new File("y")));
-    }
 }
