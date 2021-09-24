@@ -23,16 +23,33 @@ public final class Folder extends FileTreeElement {
         this(name, new HashSet<>());
     }
 
-    Set<FileTreeElement> getChildren() {
+    public Set<FileTreeElement> getChildren() {
         return children;
     }
 
-    void setChildren(Set<FileTreeElement> children) {
+    public void setChildren(Set<FileTreeElement> children) {
         this.children = Objects.requireNonNull(children);
     }
 
     @Override
     public int calculateSize() {
         return children.stream().mapToInt(FileTreeElement::calculateSize).sum();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), children);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof Folder)) {
+            return false;
+        }
+        Folder other = (Folder) obj;
+        return Objects.equals(getName(), other.getName()) && Objects.equals(children, other.children);
     }
 }

@@ -10,13 +10,19 @@ public abstract class FileTreeElement {
         this.name = Objects.requireNonNull(name);
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    void setName(String name) {
+    public void setName(String name) {
         this.name = Objects.requireNonNull(name);
     }
 
     public abstract int calculateSize();
+
+    @Override
+    public String toString() {
+        return String.format("%s[%s]", getClass().getSimpleName(), name);
+    }
+
 }

@@ -4,8 +4,8 @@ import org.easymock.EasyMockExtension;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith(EasyMockExtension.class)
-class FileTreePrinterTest {
-    // TODO: Test if the printing of file tree elements works as described in the
+class FileManagerTest {
+    // TODO: Test if the deletion of file tree elements works as described in the
     // problem statement
 
 }
